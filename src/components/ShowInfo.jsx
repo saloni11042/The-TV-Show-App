@@ -1,5 +1,6 @@
 
 import React from 'react';
+import StarRating from './StarRating';
 
 function ShowInfo({ show }){
   return (
@@ -15,7 +16,9 @@ function ShowInfo({ show }){
         </p>
         
         <p>
-          <strong>Rating:</strong> {show.rating.average ? show.rating.average.toFixed(1) : 'N/A'}
+          <strong>Rating:</strong> 
+          <StarRating voteAverage={show.rating.average} />
+          {show.rating.average ? show.rating.average.toFixed(1) : 'N/A'}
         </p>
         
       </div>

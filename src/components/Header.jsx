@@ -3,11 +3,11 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./Header.css";
 import ShowInfo from "./ShowInfo";
+import { Link } from "react-router-dom";
 
 function Header(){
   const [randomShow, setRandomShow] = useState(null);
 
-  const handleClick = () => {};
 
   useEffect(() => {
     const fetchRandomShow = async () => {
@@ -34,9 +34,11 @@ function Header(){
           </div>
           <div className="hero-info">
              <ShowInfo show={randomShow} />
-            <button className="btn btn-primary" onClick={handleClick}>
+             <Link to={`/show/${randomShow.id}`}>
+            <button className="btn btn-primary" >
               Show Details
             </button>
+            </Link>
           </div>
         </div>
       )}

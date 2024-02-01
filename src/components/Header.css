@@ -1,0 +1,36 @@
+/* src/components/HeroHeader.css */
+
+.hero-header-container {
+    textAlign: 'center';
+    marginTop: 50px;
+    background-color: darkgrey;
+  }
+  
+  .hero-header {
+    display: flex;
+    align-items: center;
+  }
+  
+  .hero-image {
+    flex: 1;
+    marginRight: 20px;
+  }
+  
+  .hero-image img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+  }
+  
+  .hero-info {
+    flex: 2;
+  }
+  
+  .details {
+    marginTop: 20px;
+  }
+  
+  .details p {
+    margin: 8px 0;
+  }
+  

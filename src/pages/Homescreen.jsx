@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import Row from "../components/Row";
 
-const Homescreen = () => {
+function Homescreen(){
   const [shows, setShows] = useState([]);
 
   useEffect(() => {

@@ -1,4 +1,4 @@
-// src/components/ViewAllShows.js
+
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
@@ -9,7 +9,7 @@ function AllShows(){
   useEffect(() => {
     const fetchAllShows = async () => {
       try {
-        // Fetch all shows from TV Maze API
+       
         const response = await axios.get('https://api.tvmaze.com/shows');
         setAllShows(response.data);
       } catch (error) {

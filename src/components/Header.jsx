@@ -1,10 +1,10 @@
-// src/components/HeroHeader.js
+
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./Header.css";
 import ShowInfo from "./ShowInfo";
 
-const Header = () => {
+function Header(){
   const [randomShow, setRandomShow] = useState(null);
 
   const handleClick = () => {};

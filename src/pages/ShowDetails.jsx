@@ -1,31 +1,30 @@
-// src/components/ShowDetails.js
+
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
-import "./ShowDetails.css"; // Import CSS file for styling
+import "./ShowDetails.css"; 
 import ShowInfo from "../components/ShowInfo";
 
-const ShowDetails = () => {
+function ShowDetails(){
   const { id } = useParams();
   const [showDetails, setShowDetails] = useState(null);
   const [bookingFormVisible, setBookingFormVisible] = useState(false);
   const [userData, setUserData] = useState({
     userName: "",
     userEmail: "",
-    movieName: "",
+    showName: "",
   });
 
   useEffect(() => {
     const fetchShowDetails = async () => {
       try {
-        // Fetch details of a specific show from TV Maze API
         const response = await axios.get(`https://api.tvmaze.com/shows/${id}`);
         setShowDetails(response.data);
 
-        // Set default movie name in user data
+
         setUserData((prevUserData) => ({
           ...prevUserData,
-          movieName: response.data.name,
+          showName: response.data.name,
         }));
       } catch (error) {
         console.error("Error fetching show details:", error);
@@ -36,7 +35,7 @@ const ShowDetails = () => {
   }, [id]);
 
   const handleBookingButtonClick = () => {
-    // Show booking form and populate with user data from local storage
+   
     setUserData((prevUserData) => ({
       ...prevUserData,
       userName: localStorage.getItem("userName") || "",
@@ -56,13 +55,11 @@ const ShowDetails = () => {
   const handleFormSubmit = (e) => {
     e.preventDefault();
 
-    // Store user data in local storage
+   
     localStorage.setItem("userName", userData.userName);
     localStorage.setItem("userEmail", userData.userEmail);
 
-    // Process the booking (you can add more logic here)
-
-    // Close the form
+   
     setBookingFormVisible(false);
   };
 
@@ -120,8 +117,8 @@ const ShowDetails = () => {
               Movie Name:
               <input
                 type="text"
-                name="movieName"
-                value={userData.movieName}
+                name="showName"
+                value={userData.showName}
                 readOnly
               />
             </label>

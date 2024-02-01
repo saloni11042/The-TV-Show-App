@@ -1,7 +1,7 @@
-// src/components/ShowInfo.js
+
 import React from 'react';
 
-const ShowInfo = ({ show }) => {
+function ShowInfo({ show }){
   return (
     <div className="show-info">
       <h1>{show.name}</h1>

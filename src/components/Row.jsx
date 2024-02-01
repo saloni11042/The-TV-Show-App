@@ -1,4 +1,4 @@
-// src/components/GenreRow.js
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
@@ -14,7 +14,7 @@ function Row({ genreId, genreName }) {
   useEffect(() => {
     const fetchGenreShows = async () => {
       try {
-        // Fetch TV shows of a specific genre from TV Maze API
+  
         const response = await axios.get(
           `https://api.tvmaze.com/shows/${genreId}/episodes`
         );

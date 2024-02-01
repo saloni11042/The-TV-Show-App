@@ -31,9 +31,10 @@ function AllShows(){
             </Link>
     
             <Link to={`/show/${show.id}`}>
-            <p className='card-title'>{show.name}</p>
+            <p style={{fontSize: '20px'}}>{show.name}</p>
+            
             </Link>
-           
+            <p style={{color: 'red', fontSize: '10px'}}>{show.genres.join(', ')}</p>
           </div>
         ))}
       </div>

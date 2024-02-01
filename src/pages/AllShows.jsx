@@ -23,15 +23,17 @@ function AllShows(){
   return (
     <div>
       <h2>All Shows</h2>
-      <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+      <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between' }}>
         {allShows.map((show) => (
-          <div key={show.id} style={{ margin: '10px', maxWidth: '200px' }}>
+          <div key={show.id} style={{ margin: '20px', maxWidth: '200px' }}>
             <Link to={`/show/${show.id}`}>
               <img src={show.image.medium} alt={show.name} style={{ maxWidth: '100%' }} />
             </Link>
+    
             <Link to={`/show/${show.id}`}>
-              <p>{show.name}</p>
+            <p className='card-title'>{show.name}</p>
             </Link>
+           
           </div>
         ))}
       </div>

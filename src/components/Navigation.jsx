@@ -1,4 +1,4 @@
-// src/components/Navbar.js
+
 import React from "react";
 import { Link } from "react-router-dom";
 
@@ -35,38 +35,12 @@ function Navigation() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/allshows">
+              <Link className="nav-link" to="/allshows/:genreId">
                 All Shows
               </Link>
             </li>
 
-            <li className="nav-item dropdown">
-              <Link
-                className="nav-link dropdown-toggle"
-                to="#"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Dropdown
-              </Link>
-              <ul className="dropdown-menu">
-                <li>
-                  <Link className="dropdown-item" to="#">
-                    Action
-                  </Link>
-                </li>
-                <li>
-                  <Link className="dropdown-item" to="#">
-                    Another action
-                  </Link>
-                </li>
-                <li>
-                  <Link className="dropdown-item" to="#">
-                    Something else here
-                  </Link>
-                </li>
-              </ul>
-            </li>
+           
           </ul>
         </div>
       </div>

@@ -35,7 +35,7 @@ function Header(){
           <div className="hero-info">
              <ShowInfo show={randomShow} />
              <Link to={`/show/${randomShow.id}`}>
-            <button className="btn btn-primary" >
+            <button className="btn btn-danger" >
               Show Details
             </button>
             </Link>

@@ -6,7 +6,6 @@ import "swiper/css/navigation";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import ShowInfo from "./ShowInfo";
 
 function Row({ genreId, genreName }) {
   const [genreShows, setGenreShows] = useState([]);
@@ -69,9 +68,6 @@ function Row({ genreId, genreName }) {
           );
         })}
       </Swiper>
-      <Link to={`/allshows/${genreId}`}>
-        <p>View All {genreName} Shows</p>
-      </Link>
     </div>
   );
 }

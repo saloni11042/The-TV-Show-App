@@ -84,7 +84,7 @@ function ShowDetails(){
               .replace("</ br>", "")}
           </p> */}
           <ShowInfo show={showDetails} />
-          <button onClick={handleBookingButtonClick}>Book Movie Ticket</button>
+          <button className="btn btn-danger" onClick={handleBookingButtonClick}>Book Ticket</button>
         </div>
       )}
 

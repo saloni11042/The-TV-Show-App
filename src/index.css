@@ -4,7 +4,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap");
 body {
   margin: 0;
-  background-color: #141414;
+  background-color: Black;
   font-family: "Poppins", sans-serif;
   color: #fff;
 }
@@ -46,4 +46,3 @@ a {
 .swiper-button-prev {
   color: #fff !important;
 }
-
